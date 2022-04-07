@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--    <settings>-->
+<!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+<!--    </settings>-->
+
+    <typeAliases>
+        <!--
+    name:实体所在的包名
+    表示包中的列名就是别名
+    
+    -->
+        <package name="com.wpc.domain"/>
+    </typeAliases>
+    <!--
+        指定其他mapper文件的位置:
+        其他mapper文件目的是找到文件的sql语句
+    -->
+    <mappers>
+        <!--
+            这个路径是从target/classes路径开启的
+            使用注意:
+            resource="mapper"文件的路径，使用/分割
+            一个mapper resource 制定一个mapper文件
+        -->
+        <package name="com.wpc.dao"/>
+    </mappers>
+</configuration>
